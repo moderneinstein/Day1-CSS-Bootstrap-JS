@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Run js</title>
+</head>
+
+<body>
+    <button onclick="removeDuplicates()">Remove Duplicates</button>
+    <script>
+        function removeDuplicates() {
+            var a = [1, 'a', 2, 'two', 1, 2];
+            var jsobject = {};
+            var i = 0;
+            var newarray = [];
+
+            for (i = 0; i < a.length; i++) {
+                if (jsobject[a[i]])
+                    jsobject[a[i]]++;
+                else if (jsobject[a[i]] == 0)
+                    jsobject[a[i]]++;
+                else {
+                    jsobject[a[i]] = 1;
+                    newarray.push(a[i]);
+                }
+            }
+            window.console.log("original array: ", a);
+            window.console.log(jsobject);
+            window.console.log(newarray);
+        }
+    </script>
+</body>
+
+</html>

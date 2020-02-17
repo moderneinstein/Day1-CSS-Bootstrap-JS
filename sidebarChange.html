@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Task 1</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .header {
+            height: 15vh;
+            border-bottom: 1px solid;
+            display: flex;
+            justify-content: center;
+        }
+
+        .sidebar {
+            top: 15vh;
+            width: 20vw;
+            height: 90vh;
+            border: 1px solid;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="button">
+            <button onclick="magic()">Magic</button>
+        </div>
+    </div>
+    <div class="sidebar" id="sidebar"></div>
+
+    <script>
+        function magic() {
+            var sidebar = document.getElementById('sidebar');
+            if (sidebar.style.float == 'right')
+                sidebar.style.float = 'left';
+            else
+                sidebar.style.float = 'right';
+        }
+    </script>
+</body>
+
+</html>
